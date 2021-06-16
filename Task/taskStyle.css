@@ -1,0 +1,96 @@
+:root {
+  --standardHeight: 400px;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px; /* to make it in the center */
+  /* top:-76px right:0  bottom:0 left:-76px */
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: load 2s linear infinite; /* -webkit => for chrome and safari 5 */
+  animation: load 2s linear infinite; /*for  the rest browsers */
+}
+
+/* animation for safari */
+@-webkit-keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.img-div {
+  /* max-height: var(--standardHeight);
+  padding: 50px;
+  display: block;
+  background: transparent; 
+  width: 600px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%); */
+  height: var(--standardHeight);
+  width: 600px;
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(35deg, #f1d7e9, #e9c3e4);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.scaleable-div {
+  /* display: none;
+  padding: 20px;
+  resize: both;
+  position: relative;
+  background: linear-gradient(35deg, #ccffff, #1c97b6);
+  height: var(--standardHeight); */
+  display: none;
+  padding: 20px;
+  resize: both;
+  position: relative;
+  background: linear-gradient(35deg, #ccffff, #1c97b6);
+  height: var(--standardHeight);
+}
+
+.myImg {
+  /* left: 50%;
+  top: 50%; */
+  text-align: center;
+  top: 50%;
+  display: block;
+  position: relative;
+  margin: auto;
+  object-fit: contain;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+/**/
+
+#dialog {
+  display: none;
+}
